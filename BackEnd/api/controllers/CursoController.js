@@ -28,6 +28,19 @@ module.exports = {
         }
         res.json(cursos);
       })
+    },
+    borrar_curso:function(req, res)
+    {
+      Curso.destroy({nombre:req.nombre}).exec(function(err, cursoborrado)
+      {
+        if(err)
+        {
+          res.send(500,{error:"error de la base de datos"});
+        }
+        res.json(cursoborrado);
+      })
     }
+
+
 };
 
