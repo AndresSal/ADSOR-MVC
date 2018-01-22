@@ -43,7 +43,7 @@ module.exports = {
 
     cambiar_curso:function(req,res)
     {
-      Curso.create({nombre:req.nombre},{nombre:aux.nombre, descripcion:aux.descripcion, num_horas:aux.num_horas, coste_horas:aux.coste_horas}).exec(function(err, cursonuevo){
+      Curso.create({nombre:req.nombre},{nombre:req.nombre, descripcion:req.descripcion, num_horas:req.num_horas, coste_horas:req.coste_horas}).exec(function(err, cursonuevo){
         if(err)
         {
           res.send(500,{error:"Error de Nase de datos"});
