@@ -39,6 +39,17 @@ module.exports = {
         }
         res.json(cursoborrado);
       })
+    },
+
+    cambiar_curso:function(req,res)
+    {
+      Curso.create({nombre:req.nombre},{nombre:aux.nombre, descripcion:aux.descripcion, num_horas:aux.num_horas, coste_horas:aux.coste_horas}).exec(function(err, cursonuevo){
+        if(err)
+        {
+          res.send(500,{error:"Error de Nase de datos"});
+        }
+        res.json(cursonuevo);
+      })
     }
 
 
