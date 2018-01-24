@@ -15,8 +15,11 @@ module.exports = {
         {
           res.send(500,{error:"Error de Nase de datos"});
         }
+        utility.generateLog("CREATE");
         res.json(cursonuevo);
+
       })
+
     },
 
 	  listar_cursos:function(req, res)
@@ -26,6 +29,7 @@ module.exports = {
         {
           res.send(500,{error:"error de base de datos"});
         }
+        utility.generateLog("LIST");
         res.json(cursos);
       })
     },
@@ -37,6 +41,7 @@ module.exports = {
         {
           res.send(500,{error:"error de la base de datos"});
         }
+        utility.generateLog("DELETE");
         res.json(cursoborrado);
       })
     },
@@ -48,10 +53,9 @@ module.exports = {
         {
           res.send(500,{error:"Error de Nase de datos"});
         }
+        utility.generateLog("UPDATE");
         res.json(cursonuevo);
       })
     }
-
-
 };
 
