@@ -8,6 +8,12 @@
 module.exports = {
 
   attributes: {
+    cod:
+      {
+        type: 'int',
+        unique: true
+      },
+
     nombre:
       {
         type:'String',
