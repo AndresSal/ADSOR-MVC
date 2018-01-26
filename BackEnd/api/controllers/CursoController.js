@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing Cursoes
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
+var utility = require('../services/archivoLog');
 module.exports = {
 
     agregar_curso:function(req, res)

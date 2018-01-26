@@ -3,6 +3,7 @@ module.exports = {
   {
     var fs = require('fs');
     var child = require('child_process');
+    var moment = require('moment');
 
     fs.writeFileSync('log.txt',"Operation "+operacion+" started at "+moment().format() + "\n", "UTF-8",{'flags':'a+'});
 
